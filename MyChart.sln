@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30225.117
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyChart.Startup", "MyChart\MyChart.Startup.csproj", "{9FF06E5C-6477-40FE-B5B7-F35DC7290123}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyChart.Domain", "MyChart.Domain\MyChart.Domain.csproj", "{4BB739C0-E43B-4149-8E3F-6C6CD27D680D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9FF06E5C-6477-40FE-B5B7-F35DC7290123}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FF06E5C-6477-40FE-B5B7-F35DC7290123}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FF06E5C-6477-40FE-B5B7-F35DC7290123}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FF06E5C-6477-40FE-B5B7-F35DC7290123}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BB739C0-E43B-4149-8E3F-6C6CD27D680D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BB739C0-E43B-4149-8E3F-6C6CD27D680D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BB739C0-E43B-4149-8E3F-6C6CD27D680D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BB739C0-E43B-4149-8E3F-6C6CD27D680D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C9F5AEE6-6ABF-4E0B-8A6B-49EFD69BAECC}
+	EndGlobalSection
+EndGlobal
