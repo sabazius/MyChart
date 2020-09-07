@@ -41,6 +41,17 @@ namespace MyChart.Domain.Common
             ThrowException<TException>($"{name} must be between {min} and {max}.");
         }
 
+        public static void AgainstOutOfRange<TException>(DateTime date, DateTime minDate, DateTime maxDate, string name = "Value")
+           where TException : BaseDomainException, new()
+        {
+            if (minDate <= date && date <= maxDate)
+            {
+                return;
+            }
+
+            ThrowException<TException>($"{date} must be between {minDate} and {maxDate}.");
+        }
+
         public static void AgainstOutOfRange<TException>(decimal number, decimal min, decimal max, string name = "Value")
             where TException : BaseDomainException, new()
         {

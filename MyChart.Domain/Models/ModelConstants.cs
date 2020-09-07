@@ -1,4 +1,6 @@
-﻿namespace MyChart.Domain.Models
+﻿using System;
+
+namespace MyChart.Domain.Models
 {
     public class ModelConstants
     {
@@ -16,6 +18,18 @@
         {
             public const int MinNameLength = 1;
             public const int MaxNameLength = 100;
+            public const int MinBPM = 10;
+            public const int MaxBPM = 2000;
+            public const int MinReleaseYear = 2000;
+        }
+
+        public class Chart
+        {
+            public const int MinNameLength = 3;
+            public const int MaxNameLength = 100;
+            public const int MinSongs = 5;
+            public const int MaxSongs = 1000;
+            public const int MinChartYear = 2020;
         }
 
         public class Country

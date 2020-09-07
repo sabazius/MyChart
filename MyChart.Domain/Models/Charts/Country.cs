@@ -13,8 +13,8 @@ namespace MyChart.Domain.Models.Charts
             Continent = continent;
         }
 
-        public string Name { get; }
-        public Continent Continent { get; }
+        public string Name { get; private set; }
+        public Continent Continent { get; private set; }
 
         private void Validate(string name, Continent continent)
         {

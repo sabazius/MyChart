@@ -14,9 +14,9 @@ namespace MyChart.Domain.Models.Music
             Name = name;
         }
 
-        public string Name { get; }
-        public string? Country { get; }
-        public DateTime? BirthDay { get; }
+        public string Name { get; private set; }
+        public string? Country { get; private set; }
+        public DateTime? BirthDay { get; private set; }
 
         private void Validate(string name)
         {
