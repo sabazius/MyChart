@@ -18,6 +18,17 @@
             public const int MaxNameLength = 100;
         }
 
+        public class Country
+        {
+            public const int MinNameLength = 2;
+            public const int MaxNameLength = 50;
+        }
+
+        public class Artist
+        {
+            public const int MinNameLength = 1;
+            public const int MaxNameLength = 50;
+        }
         //public class Options
         //{
         //    public const int MinNumberOfSeats = 2;

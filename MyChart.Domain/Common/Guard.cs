@@ -64,6 +64,17 @@ namespace MyChart.Domain.Common
             ThrowException<TException>($"{name} must be a valid URL.");
         }
 
+        public static void ForNotNull<TException>(object value, string name = "Value")
+            where TException : BaseDomainException, new()
+        {
+            if (value != null)
+            {
+                return;
+            }
+
+            ThrowException<TException>($"{name} must be not NULL object.");
+        }
+
         public static void Against<TException>(object actualValue, object unexpectedValue, string name = "Value")
             where TException : BaseDomainException, new()
         {

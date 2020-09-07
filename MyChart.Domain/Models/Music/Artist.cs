@@ -1,9 +1,9 @@
 ﻿using MyChart.Domain.Common;
 using MyChart.Domain.Exceptions;
 using System;
-using static MyChart.Domain.Models.ModelConstants.Common;
+using static MyChart.Domain.Models.ModelConstants.Artist;
 
-namespace MyChart.Domain.Models
+namespace MyChart.Domain.Models.Music
 {
     public class Artist
     {
@@ -11,7 +11,6 @@ namespace MyChart.Domain.Models
         internal Artist(string name)
         {
             Validate(name);
-
             Name = name;
         }
 
