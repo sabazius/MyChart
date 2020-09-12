@@ -5,7 +5,7 @@ using static MyChart.Domain.Models.ModelConstants.Artist;
 
 namespace MyChart.Domain.Models.Music
 {
-    public class Artist
+    public class Artist : Entity<int>
     {
 
         internal Artist(string name)

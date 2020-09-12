@@ -4,7 +4,6 @@ using MyChart.Domain.Common;
 using MyChart.Domain.Exceptions;
 using MyChart.Domain.Models.Music;
 using static MyChart.Domain.Models.ModelConstants.Chart;
-//using static MyChart.Domain.Models.ModelConstants.Common;
 
 namespace MyChart.Domain.Models.Charts
 {

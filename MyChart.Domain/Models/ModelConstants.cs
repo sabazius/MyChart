@@ -21,6 +21,8 @@ namespace MyChart.Domain.Models
             public const int MinBPM = 10;
             public const int MaxBPM = 2000;
             public const int MinReleaseYear = 2000;
+            public const int MinKeyLength = 1;
+            public const int MaxKeyLength = 2;
         }
 
         public class Chart

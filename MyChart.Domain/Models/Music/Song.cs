@@ -17,7 +17,7 @@ namespace MyChart.Domain.Models.Music
         }
         public string Name { get; private set; }
         public Artist Artist { get; private set; }
-        public int? BPM { get; private set; }
+        public SongOptions? Options { get; private set; }
         public DateTime? ReleaseDate { get; private set; }
         public string? YouTubeURL { get; private set; }
 
@@ -59,18 +59,7 @@ namespace MyChart.Domain.Models.Music
 
             return this;
         }
-        /// <summary>
-        /// Update BPM of the <see cref="Song"/>
-        /// </summary>
-        /// <param name="bpm">beats per minute</param>
-        /// <returns>current song object</returns>
-        public Song UpdateBPM(int bpm)
-        {
-            ValidateBPM(bpm);
-            this.BPM = bpm;
-
-            return this;
-        }
+        
         /// <summary>
         /// Update <see cref="Song.ReleaseDate"/>
         /// </summary>
@@ -94,9 +83,19 @@ namespace MyChart.Domain.Models.Music
 
             return this;
         }
+        /// <summary>
+        /// Update BPM of the <see cref="Song"/>
+        /// </summary>
+        /// <param name="bpm">beats per minute</param>
+        /// <returns>current song object</returns>
+        public Song UpdateOptions(int bpm, string key)
+        {
+            this.Options = new SongOptions(bpm, key);
 
-    #endregion
-    #region Validators
+            return this;
+        }
+        #endregion
+        #region Validators
 
         /// <summary>
         /// Validate <see cref="Song"/> name
@@ -120,19 +119,7 @@ namespace MyChart.Domain.Models.Music
                 artist,
                 nameof(this.Artist));
         }
-        /// <summary>
-        /// Validate <see cref="Song.BPM"/>
-        /// </summary>
-        /// <param name="bpm">beats per minute</param>
-        private void ValidateBPM(int bpm)
-        {
-            Guard.AgainstOutOfRange<InvalidSongException>(
-                bpm,
-                MinBPM,
-                MaxBPM,
-                nameof(this.BPM)
-            );
-        }
+        
         /// <summary>
         /// Validate <see cref="Song.ReleaseDate"/>
         /// </summary>
