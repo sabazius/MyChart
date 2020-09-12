@@ -19,16 +19,16 @@ namespace MyChart.Domain.Models.Charts
             ValidateChartDate(releaseDate);
             Name = name;
             NumberOfSongs = numberOfSongs;
-            URL = url;
+            SourceURL = url;
             ChartDate = releaseDate;
             songs = new HashSet<Song>(NumberOfSongs);
         }
 
-        internal Chart(string name, int numberOfSongs, string url, DateTime releaseDate, Country country)
+        internal Chart(string name, int numberOfSongs, string sourceUrl, DateTime releaseDate, Country country)
         {
             Name = name;
             NumberOfSongs = numberOfSongs;
-            URL = url;
+            SourceURL = sourceUrl;
             ChartDate = releaseDate;
             songs = new HashSet<Song>(NumberOfSongs);
             Country = country;
@@ -36,7 +36,7 @@ namespace MyChart.Domain.Models.Charts
 
         public string Name { get; private set; }
         public int NumberOfSongs { get; private set; }
-        public string URL { get; private set; }
+        public string SourceURL { get; private set; }
         public DateTime ChartDate { get; private set; }
         public Country? Country { get; private set; }
 
@@ -64,14 +64,14 @@ namespace MyChart.Domain.Models.Charts
             return this;
         }
         /// <summary>
-        /// Update <see cref="Chart.URL"/>
+        /// Update <see cref="Chart.SourceURL"/>
         /// </summary>
         /// <param name="url">URL to validate</param>
         /// <returns>current <see cref="Chart"/> object</returns>
         public Chart UpdateURL(string url)
         {
             ValidateUrl(url);
-            this.URL = url;
+            this.SourceURL = url;
 
             return this;
         }
@@ -132,13 +132,13 @@ namespace MyChart.Domain.Models.Charts
                 nameof(this.NumberOfSongs));
         }
         /// <summary>
-        /// Validate <see cref="Chart.URL"/>
+        /// Validate <see cref="Chart.SourceURL"/>
         /// </summary>
         /// <param name="chartUrl">URL to validate</param>
         private void ValidateUrl(string chartUrl)
             => Guard.ForValidUrl<InvalidChartException>(
                 chartUrl,
-                nameof(this.URL));
+                nameof(this.SourceURL));
         /// <summary>
         /// Validate <see cref="Chart.ChartDate"/>
         /// </summary>

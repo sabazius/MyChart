@@ -95,7 +95,7 @@ namespace MyChart.Domain.Models.Music
             return this;
         }
         #endregion
-        #region Validators
+    #region Validators
 
         /// <summary>
         /// Validate <see cref="Song"/> name
