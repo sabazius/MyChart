@@ -1,4 +1,5 @@
-﻿using MyChart.Domain.Models.Charts;
+﻿using MyChart.Domain.Common;
+using MyChart.Domain.Models.Charts;
 using System;
 
 namespace MyChart.Domain.Factories.Charts

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MyChart.Domain.Exceptions
+namespace MyChart.Domain.Common
 {
     public abstract class BaseDomainException : Exception
     {

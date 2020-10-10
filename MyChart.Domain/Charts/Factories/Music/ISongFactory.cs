@@ -1,4 +1,5 @@
-﻿using MyChart.Domain.Models.Music;
+﻿using MyChart.Domain.Common;
+using MyChart.Domain.Models.Music;
 using System;
 
 namespace MyChart.Domain.Factories.Music

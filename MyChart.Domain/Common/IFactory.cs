@@ -1,6 +1,4 @@
-﻿using MyChart.Domain.Common;
-
-namespace MyChart.Domain.Factories
+﻿namespace MyChart.Domain.Common
 {
     public interface IFactory<out TEntity> where TEntity : IAggregateRoot
     {

@@ -1,4 +1,6 @@
-﻿namespace MyChart.Domain.Exceptions
+﻿using MyChart.Domain.Common;
+
+namespace MyChart.Domain.Exceptions
 {
     public class InvalidArtistException : BaseDomainException
     {

@@ -1,5 +1,4 @@
-﻿using MyChart.Domain.Exceptions;
-using MyChart.Domain.Models;
+﻿using MyChart.Domain.Models;
 using System;
 
 namespace MyChart.Domain.Common

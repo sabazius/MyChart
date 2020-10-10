@@ -1,8 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using MyChart.Domain.Common;
+﻿using MyChart.Domain.Common;
 using MyChart.Domain.Exceptions;
 using MyChart.Domain.Models.Music;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using static MyChart.Domain.Models.ModelConstants.Chart;
 
 namespace MyChart.Domain.Models.Charts
@@ -39,6 +40,15 @@ namespace MyChart.Domain.Models.Charts
         public string SourceURL { get; private set; }
         public DateTime ChartDate { get; private set; }
         public Country? Country { get; private set; }
+
+        public IReadOnlyCollection<Song> Songs => this.songs.ToList().AsReadOnly();
+
+        public void AddSong(Song song)
+        {
+            this.songs.Add(song);
+
+            this.RaiseEvent(new CarAdAddedEvent());
+        }
 
         #region Setters
         /// <summary>
